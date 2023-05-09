@@ -37,7 +37,8 @@ func _on_OptionsBtn_pressed():
 
 func _on_MainBtn_pressed():
 	get_tree().paused = false
-	Global.goto_scene("Main")
+	#Global.goto_scene("Main")
+	Javascript.quit()
 	#get_tree().change_scene(Global.Scene["Main"])
 	pass # Replace with function body.
 

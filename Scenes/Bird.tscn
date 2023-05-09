@@ -77,3 +77,4 @@ bus = "SFX"
 
 [node name="hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
+bus = "SFX"
