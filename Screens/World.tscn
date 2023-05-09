@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/Bird.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/test/background.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scripts/World.gd" type="Script" id=7]
 [ext_resource path="res://Audios/sfx_point.wav" type="AudioStream" id=8]
 [ext_resource path="res://0 - General/Themes/Fonts/Lato-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://0 - General/Sprites/UI/pause.svg" type="Texture" id=10]
 [ext_resource path="res://0 - General/Themes/Fonts/Titulos.tres" type="DynamicFont" id=11]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -64,6 +65,10 @@ z_index = -1
 
 [node name="Limites" type="Node2D" parent="." groups=["limites"]]
 
+[node name="point" type="AudioStreamPlayer2D" parent="Limites"]
+stream = ExtResource( 8 )
+bus = "SFX"
+
 [node name="Techo" type="KinematicBody2D" parent="Limites"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Techo"]
@@ -101,6 +106,15 @@ align = 1
 position = Vector2( 36, 920 )
 normal = null
 
+[node name="PauseBtn" type="TextureButton" parent="GUI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -74.0
+margin_right = 1.0
+margin_bottom = 75.0
+texture_normal = ExtResource( 10 )
+expand = true
+
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = -1
 visible = false
@@ -119,8 +133,5 @@ position = Vector2( 1096.2, 610 )
 scale = Vector2( 5.5, 4.4 )
 texture = ExtResource( 4 )
 
-[node name="point" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 8 )
-bus = "SFX"
-
 [connection signal="TouchButton" from="GUI/TouchButton" to="." method="_on_TouchButton_TouchButton"]
+[connection signal="pressed" from="GUI/PauseBtn" to="." method="_on_PauseBtn_pressed"]

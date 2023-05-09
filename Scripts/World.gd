@@ -28,7 +28,7 @@ func _ready():
 
 
 func addScore():
-	$point.play()
+	$Limites/point.play()
 	
 	puntos += 1
 	puntaje.text = String(puntos)
@@ -36,8 +36,8 @@ func addScore():
 	if puntos == 1:
 		bird._set_animation("1")
 	
-	if (puntos%10 == 3): #Cada 3 tubos
-		bird.vel_desp +=  bird.vel_incrementar
+	#if (puntos%10 == 3): #Cada 3 tubos
+	bird.vel_desp +=  bird.vel_incrementar
 	
 
 func fin_juego():
@@ -46,6 +46,8 @@ func fin_juego():
 	#get_tree().reload_current_scene()
 	Global.goto_scene("FlappyMoneyInterfaz")
 	
+func init():
+	get_tree().reload_current_scene()
 
 func _on_TouchButton_TouchButton():
 	print(bird.position)
@@ -53,3 +55,9 @@ func _on_TouchButton_TouchButton():
 	
 	if bird.alive:
 		bird.bird_up()
+
+func _on_PauseBtn_pressed():
+	var paused : Object = load(Global.Scene["Pause"]).instance()
+	
+	add_child(paused)
+	get_tree().paused = true

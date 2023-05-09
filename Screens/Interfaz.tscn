@@ -87,7 +87,7 @@ anchor_right = 1.0
 margin_top = 87.0
 margin_bottom = 174.0
 custom_fonts/font = SubResource( 2 )
-text = "FLAPPY BIRD"
+text = "FLAPPY MONEY"
 align = 1
 valign = 1
 
@@ -104,8 +104,9 @@ anchor_bottom = 1.0
 color = Color( 1, 1, 1, 0.901961 )
 
 [node name="Label" type="Label" parent="Instrucciones"]
+margin_top = 30.0
 margin_right = 636.0
-margin_bottom = 97.0
+margin_bottom = 377.0
 text = "¡¡¡ Protege tu dinero !!!
 
 Las novedades de manga hacen peligrar nuestro dinero. Evita los manga para guardar tu dinero.

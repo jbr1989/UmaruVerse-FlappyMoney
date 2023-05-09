@@ -32,6 +32,8 @@ func _integrate_forces(state):
 				$AnimationPlayer.stop()
 				linear_velocity.x = 0
 				$hit.play()
+				
+				$AnimatedSprite.flip_v=true
 				get_tree().get_nodes_in_group("main")[0].fin_juego()
 
 

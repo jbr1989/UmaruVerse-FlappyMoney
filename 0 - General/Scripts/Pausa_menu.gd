@@ -28,7 +28,8 @@ func _on_RestartBtn_pressed():
 	pass # Replace with function body.
 
 func _on_QuitBtn_pressed():
-	get_tree().quit()
+	#get_tree().quit()
+	Javascript.quit()
 	pass # Replace with function body.
 
 func _on_OptionsBtn_pressed():
@@ -37,8 +38,8 @@ func _on_OptionsBtn_pressed():
 
 func _on_MainBtn_pressed():
 	get_tree().paused = false
-	#Global.goto_scene("Main")
-	Javascript.quit()
+	Global.goto_scene("FlappyMoneyInterfaz")
+	#Javascript.quit()
 	#get_tree().change_scene(Global.Scene["Main"])
 	pass # Replace with function body.
 
