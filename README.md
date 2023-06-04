@@ -4,7 +4,7 @@ Videojuego basado en el universo de [UmaruYT](https://www.youtube.com/@UmaruYT/)
 
 ## Documento de diseño - GDD
 
-Próximamente.
+[Documento en Drive](https://docs.google.com/document/d/1uvuJnF-tesfL8v_zWbHgHR2u3mdvfGoYK4OZ8O0RKXU/edit?usp=drive_link)
 
     
 ## Asociados
