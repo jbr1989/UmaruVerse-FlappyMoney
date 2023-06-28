@@ -44,6 +44,6 @@ func save():
 	Javascript.setCookie("settings", to_json(game_data))
 	
 func load_init():
-	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), not game_data["music"]["all"])
-	AudioServer.set_bus_mute(AudioServer.get_bus_index("Musica"), not game_data["music"]["music"])
-	AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), not game_data["music"]["sfx"])
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), not game_data["audio"]["all"])
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Musica"), not game_data["audio"]["music"])
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), not game_data["audio"]["sfx"])

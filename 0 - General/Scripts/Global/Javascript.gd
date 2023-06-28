@@ -7,7 +7,8 @@ func quit():
 	JavaScript.eval("history.back()")
 
 func getCookie(name:String):
-	var cookie : String = JavaScript.eval("getCookie('" + name + "')")
+	var cookie = JavaScript.eval("getCookie('" + name + "')")
+	if (cookie==null): return ""
 	print("COOKIE: " + cookie)
 	return cookie
 	

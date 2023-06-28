@@ -1,0 +1,8 @@
+{
+    "audio" : {
+        "all" : true,
+        "music" : true,
+        "sfx" : true
+    },
+    "user": ""
+}
