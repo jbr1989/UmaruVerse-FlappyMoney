@@ -1,16 +1,11 @@
 extends Node
 
 onready var Scene : Dictionary = {
-	"Splash": "res://0 - General/Scenes/Splash.tscn",
-	"Main": "res://0 - General/Scenes/MainGame.tscn",
 	"Pause" : "res://0 - General/Scenes/Pausa_menu.tscn",
 	"Settings" : "res://0 - General/Scenes/SettingsScene.tscn",
-	"Credits": "res://0 - General/Scenes/Credits.tscn",
-	"Catch" : "res://1 - CatchManga/Screens/Mundo.tscn",
-	"Arcanoid" : "res://2 - Arcanoid/Screens/Title.tscn",
-	"FindPartner" : "res://3 - FindPartner/Screens/Tablero.tscn",
-	"FlappyMoney" : "res://Screens/World.tscn",
-	"FlappyMoneyInterfaz" : "res://Screens/Interfaz.tscn"
+	"Interfaz" : "res://Screens/Interfaz.tscn",
+	"Mundo" : "res://Screens/World.tscn",
+	"ScorePanel" : "res://Screens/Puntuacion.tscn"
 }
 
 onready var Api : Dictionary = {

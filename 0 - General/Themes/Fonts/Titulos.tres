@@ -1,7 +1,8 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://0 - General/Themes/Fonts/Steamed DEMO.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://0 - General/Themes/Fonts/futur2.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 64
+size = 50
+outline_size = 1
 font_data = ExtResource( 1 )
