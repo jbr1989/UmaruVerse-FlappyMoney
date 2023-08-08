@@ -5,7 +5,8 @@ onready var Scene : Dictionary = {
 	"Settings" : "res://0 - General/Scenes/SettingsScene.tscn",
 	"Interfaz" : "res://Screens/Interfaz.tscn",
 	"Mundo" : "res://Screens/World.tscn",
-	"ScorePanel" : "res://Screens/Puntuacion.tscn"
+	"ScorePanel" : "res://Screens/Puntuacion.tscn",
+	"FPS": "res://0 - General/Scenes/fps.tscn"
 }
 
 onready var Api : Dictionary = {
@@ -58,6 +59,10 @@ func _deferred_goto_scene(path):
 
 func change_displayMode(toggle):
 	OS.window_fullscreen = toggle
+	
+func addChild(tree, scene):
+	var s = ResourceLoader.load(Scene[scene])
+	tree.add_child(s.instance())
 
 #func wait(seconds):
 #	yield(wait(2),"completed");

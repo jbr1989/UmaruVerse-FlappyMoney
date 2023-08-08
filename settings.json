@@ -4,5 +4,17 @@
         "music" : true,
         "sfx" : true
     },
-    "user": ""
+    "debug": false,
+    "oAuth":{
+        "type": "",
+        "token": "",
+        "refresh": ""
+    },
+    "user": {
+        "id": "",
+        "type": "",
+        "type_id": "",
+        "name": "",
+        "img": ""
+    }
 }

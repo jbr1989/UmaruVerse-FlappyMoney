@@ -15,6 +15,8 @@ var bird : RigidBody2D
 
 
 func _ready():
+	if Settings.game_data["debug"] : Global.addChild($GUI, "FPS")
+	
 	start()
 	
 func init():

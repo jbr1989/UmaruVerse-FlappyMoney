@@ -5,9 +5,9 @@ extends CanvasLayer
 #
 #signal iniciar_juego
 
-#func _ready():
-#	Analytics.start_game("FlappyMoney")
-#
+func _ready():
+	if Settings.game_data["debug"] : Global.addChild(self, "FPS")
+	
 #func mostrar_mensaje(texto, timeout = false):
 #	$Mensaje.text = texto
 #	$Mensaje.show()
@@ -50,3 +50,7 @@ func _on_PlayBtn_pressed():
 func _on_QuitBtn_pressed():
 	#Global.goto_scene("Main")
 	Javascript.quit()
+
+
+func _on_SettingsBtn_pressed():
+	Global.addChild(self, "Settings")

@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://0 - General/Scripts/Pausa_menu.gd" type="Script" id=1]
 [ext_resource path="res://0 - General/Sprites/UI/sound-play.svg" type="Texture" id=2]
-[ext_resource path="res://0 - General/Scenes/SettingsScene.tscn" type="PackedScene" id=3]
 [ext_resource path="res://0 - General/Themes/Normal.tres" type="Theme" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=2]
@@ -81,8 +80,6 @@ margin_top = 654.0
 margin_right = 648.0
 margin_bottom = 711.0
 text = "MENU PRINCIPAL"
-
-[node name="SettingsMenu" parent="." instance=ExtResource( 3 )]
 
 [connection signal="pressed" from="MarginContainer/Menu/HBoxContainer/SoundBtn" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="MarginContainer/Menu/PlayBtn" to="." method="_on_PlayBtn_pressed"]

@@ -69,38 +69,7 @@ margin_bottom = 47.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "OPCIONES"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
-visible = false
-margin_top = 51.0
-margin_right = 640.0
-margin_bottom = 108.0
-
-[node name="UsuarioLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
-margin_top = 5.0
-margin_right = 140.0
-margin_bottom = 52.0
-text = "USUARIO"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
-margin_left = 144.0
-margin_right = 640.0
-margin_bottom = 57.0
-size_flags_horizontal = 3
-alignment = 2
-
-[node name="UsuarioTxt" type="LineEdit" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
-margin_right = 404.0
-margin_bottom = 57.0
-size_flags_horizontal = 3
-clear_button_enabled = true
-
-[node name="UsuarioBtn" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer"]
-margin_left = 408.0
-margin_right = 496.0
-margin_bottom = 57.0
-text = "SAVE"
-
-[node name="Settings" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="Audio" type="GridContainer" parent="Panel/MarginContainer/VBoxContainer"]
 margin_top = 51.0
 margin_right = 494.0
 margin_bottom = 222.0
@@ -108,42 +77,59 @@ custom_constants/vseparation = 15
 custom_constants/hseparation = 30
 columns = 2
 
-[node name="SoundLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/Settings"]
+[node name="SoundLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/Audio"]
 margin_right = 130.0
 margin_bottom = 47.0
 text = "AUDIO"
 
-[node name="SoundChk" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Settings"]
+[node name="SoundChk" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Audio"]
 margin_left = 430.0
 margin_right = 494.0
 margin_bottom = 47.0
 size_flags_horizontal = 10
 custom_fonts/font = SubResource( 2 )
 
-[node name="MusicaLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/Settings"]
+[node name="MusicaLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/Audio"]
 margin_top = 62.0
 margin_right = 130.0
 margin_bottom = 109.0
 text = "   Música"
 
-[node name="MusicaChk" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Settings"]
+[node name="MusicaChk" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Audio"]
 margin_left = 430.0
 margin_top = 62.0
 margin_right = 494.0
 margin_bottom = 109.0
 size_flags_horizontal = 10
 
-[node name="EfectosLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/Settings"]
+[node name="EfectosLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/Audio"]
 margin_top = 124.0
 margin_right = 130.0
 margin_bottom = 171.0
 text = "   Efectos"
 
-[node name="EfectosChk" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Settings"]
+[node name="EfectosChk" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Audio"]
 margin_left = 430.0
 margin_top = 124.0
 margin_right = 494.0
 margin_bottom = 171.0
+size_flags_horizontal = 10
+custom_fonts/font = SubResource( 2 )
+
+[node name="Debug" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+margin_top = 226.0
+margin_right = 494.0
+margin_bottom = 273.0
+
+[node name="DebugLbl" type="Label" parent="Panel/MarginContainer/VBoxContainer/Debug"]
+margin_right = 107.0
+margin_bottom = 47.0
+text = "DEBUG"
+
+[node name="DebugChk" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Debug"]
+margin_left = 430.0
+margin_right = 494.0
+margin_bottom = 47.0
 size_flags_horizontal = 10
 custom_fonts/font = SubResource( 2 )
 
@@ -154,8 +140,8 @@ margin_left = -64.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 5 )
 
-[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/HBoxContainer/UsuarioBtn" to="." method="_on_UsuarioBtn_pressed"]
-[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Settings/SoundChk" to="." method="_on_SoundChk_toggled"]
-[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Settings/MusicaChk" to="." method="_on_MusicaChk_toggled"]
-[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Settings/EfectosChk" to="." method="_on_EfectosChk_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Audio/SoundChk" to="." method="_on_SoundChk_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Audio/MusicaChk" to="." method="_on_MusicaChk_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Audio/EfectosChk" to="." method="_on_EfectosChk_toggled"]
+[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Debug/DebugChk" to="." method="_on_DebugChk_toggled"]
 [connection signal="pressed" from="Panel/CloseBtn" to="." method="_on_CloseBtn_pressed"]

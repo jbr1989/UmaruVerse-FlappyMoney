@@ -124,9 +124,8 @@ custom_constants/separation = 20
 alignment = 1
 
 [node name="Book" type="TextureRect" parent="GUI/InfoContainer/BookContainer"]
-margin_top = 18.0
-margin_right = 50.0
-margin_bottom = 64.0
+margin_right = 40.0
+margin_bottom = 78.0
 texture = ExtResource( 12 )
 stretch_mode = 6
 
