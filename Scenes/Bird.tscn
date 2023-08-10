@@ -44,8 +44,6 @@ tracks/0/keys = {
 [node name="Bird" type="RigidBody2D" groups=["bird"]]
 contacts_reported = 2
 script = ExtResource( 1 )
-vel_impulso = 75.0
-vel_desp = 50.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, -4 )

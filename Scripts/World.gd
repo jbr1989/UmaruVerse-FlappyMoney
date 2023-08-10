@@ -36,8 +36,8 @@ func start():
 	var suelo_y = get_tree().get_root().size.y
 	var zoom = bird.getZoom()
 	
-	print ('SUELO')
-	print (str(suelo_y) + " : " + str(zoom) + " : " + str(suelo_y * zoom))
+	#print ('SUELO')
+	#print (str(suelo_y) + " : " + str(zoom) + " : " + str(suelo_y * zoom))
 	
 	$Limites/Suelo/CollisionShape2D.position = Vector2(0, suelo_y * zoom)
 	
@@ -74,8 +74,8 @@ func fin_juego():
 #	get_tree().reload_current_scene()
 
 func _on_TouchButton_TouchButton():
-	print(bird.position)
-	print(bird.global_position)
+	#print(bird.position)
+	#print(bird.global_position)
 	
 	if bird.alive:
 		bird.bird_up()
@@ -92,6 +92,3 @@ func _on_TimerTimer_timeout():
 	
 func close():
 	Global.goto_scene("Interfaz")
-
-
-

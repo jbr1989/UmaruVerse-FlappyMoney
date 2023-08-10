@@ -1,10 +1,11 @@
 extends Node
 
-func goto(url:String="", target:String="_blank"):
-	JavaScript.eval("window.location.href = '" + url + "';")
-
+var window = JavaScript.get_interface("window")
+var localStorage = JavaScript.get_interface("localStorage")
+	
 func quit():
-	JavaScript.eval("history.back()")
+	if window!=null: window.history.back()
+	else: get_tree().quit()
 
 func getCookie(name:String):
 #	var cookie = JavaScript.eval("getCookie('" + name + "')")
@@ -18,9 +19,11 @@ func setCookie(name:String, data:String):
 	localStorageSet(name, data)
 
 func localStorageSet(name:String, data:String):
-	JavaScript.eval("localStorage.setItem('" + name + "','" + data + "')")
+	if localStorage!=null : localStorage.setItem(name, data)
 
 func localStorageGet(name:String):
-	var data = JavaScript.eval("localStorage.getItem('"+name+"')")
+	if localStorage==null : return ''
+	
+	var data = localStorage.getItem(name)
 	if (data==null): return ''
 	return data

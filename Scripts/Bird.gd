@@ -1,8 +1,8 @@
 extends RigidBody2D
 
-export (float) var vel_impulso
-export (float) var vel_desp
-export (float) var vel_incrementar = 5
+export (int) var vel_impulso = 75
+export (int) var vel_desp = 50
+export (int) var vel_incrementar = 5
 
 var alive = true
 
