@@ -4,11 +4,11 @@ onready var sound_all = AudioServer.get_bus_index("Master")
 onready var sound_musica = AudioServer.get_bus_index("Musica")
 onready var sound_sfx = AudioServer.get_bus_index("SFX")
 
-onready var SoundChk = $Panel/MarginContainer/VBoxContainer/Audio/SoundChk
-onready var MusicaChk = $Panel/MarginContainer/VBoxContainer/Audio/MusicaChk
-onready var EfectosChk = $Panel/MarginContainer/VBoxContainer/Audio/EfectosChk
+onready var SoundChk = $Panel/VBoxContainer/Audio/SoundChk
+onready var MusicaChk = $Panel/VBoxContainer/Audio/MusicaChk
+onready var EfectosChk = $Panel/VBoxContainer/Audio/EfectosChk
 
-onready var DebugChk = $Panel/MarginContainer/VBoxContainer/Debug/DebugChk
+onready var DebugChk = $Panel/VBoxContainer/Debug/DebugChk
 
 var save
 var game_data
