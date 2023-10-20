@@ -17,11 +17,11 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Settings="*res://0 - General/Scripts/Global/Settings.gd"
-Analytics="*res://0 - General/Scripts/Global/Analytics.gd"
-Global="*res://0 - General/Scripts/Global/global.gd"
-HttpRequest="*res://0 - General/Scripts/Global/HttpRequest.gd"
 Javascript="*res://0 - General/Scripts/Global/Javascript.gd"
+Settings="*res://0 - General/Scripts/Global/Settings.gd"
+Global="*res://0 - General/Scripts/Global/Global.gd"
+Analytics="*res://0 - General/Scripts/Global/Analytics.gd"
+HttpRequest="*res://0 - General/Scripts/Global/HttpRequest.gd"
 Smtp="*res://0 - General/Scripts/Global/Smtp.gd"
 
 [display]

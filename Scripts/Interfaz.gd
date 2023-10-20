@@ -14,4 +14,4 @@ func _on_Settings_pressed():
 
 
 func _on_Quit_pressed():
-	Javascript.quit()
+	Global.quit()

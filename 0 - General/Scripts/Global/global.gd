@@ -13,12 +13,6 @@ onready var Api : Dictionary = {
 	"url" : "http://localhost:3000/" # https://api.jbr1989.es/api/
 }
 
-var current_scene : Node = null
-export var init : bool = false
-
-func getInit(): return init
-func setInit(value): init=value
-
 func goto_scene(scene):
 	
 	var path = Scene[scene]
@@ -49,7 +43,7 @@ func _deferred_goto_scene(path):
 	var s = ResourceLoader.load(path)
 
 	# Instance the new scene
-	current_scene = s.instance()
+	var current_scene = s.instance()
 
 	# Add it to the active scene, as child of root
 	get_tree().get_root().add_child(current_scene)
@@ -64,5 +58,8 @@ func addChild(tree, scene):
 	var s = ResourceLoader.load(Scene[scene])
 	tree.add_child(s.instance())
 
-#func wait(seconds):
-#	yield(wait(2),"completed");
+func quit():
+	var window = JavaScript.get_interface("window");
+	
+	if window!=null: window.endGame() #window.history.back()
+	else: get_tree().quit()
