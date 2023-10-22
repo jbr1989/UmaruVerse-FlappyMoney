@@ -27,7 +27,8 @@ func _integrate_forces(state):
 	if alive:
 	
 		for i in range(state.get_contact_count()):
-			if(state.get_contact_collider_object(i).is_in_group("kill")):
+			
+			if(alive and state.get_contact_collider_object(i).is_in_group("kill")):
 				alive = false
 				$AnimationPlayer.stop()
 				linear_velocity.x = 0

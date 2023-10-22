@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+onready var MsgLabel = $Panel/Msg
 
 onready var ScoreLabel = $Panel/InfoContainer/BookContainer/ScoreLabel
 onready var TimeLabel = $Panel/InfoContainer/TimerContainer/TimeLabel
@@ -20,11 +21,18 @@ func load_score(s, t):
 
 	ScoreLabel.text = str(score)
 	TimeLabel.text = str(time)
+	
+	if Scores.isHighScore(s,t): MsgLabel.text = "NUEVO RECORD"
+	
+	Scores.addScore(0, 0, "Anónimo", s, t)
 
 
 func _on_RetryBtn_pressed():
 	self.queue_free()
 	parent.init()
+	
+func _on_ScoresBtn_pressed():
+	Global.addChild(self, "ScoreList")
 
 
 func _on_CloseBtn_pressed():
@@ -38,4 +46,7 @@ func saveScore():
 	var response = yield(httpRequest.postJSON("https://api.jbr1989.es/umaruverse/scores", [], to_json(body)), "completed")
 	
 	pass
+
+
+
 

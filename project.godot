@@ -23,6 +23,7 @@ Global="*res://0 - General/Scripts/Global/Global.gd"
 Analytics="*res://0 - General/Scripts/Global/Analytics.gd"
 HttpRequest="*res://0 - General/Scripts/Global/HttpRequest.gd"
 Smtp="*res://0 - General/Scripts/Global/Smtp.gd"
+Scores="*res://0 - General/Scripts/Global/Scores.gd"
 
 [display]
 

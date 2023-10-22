@@ -6,6 +6,7 @@ onready var Scene : Dictionary = {
 	"Interfaz" : "res://Screens/Interfaz.tscn",
 	"Mundo" : "res://Screens/World.tscn",
 	"ScorePanel" : "res://Screens/Puntuacion.tscn",
+	"ScoreList" : "res://Screens/PuntuacionLista.tscn",
 	"FPS": "res://0 - General/Scenes/fps.tscn"
 }
 
