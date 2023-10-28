@@ -11,6 +11,8 @@ func addScore(score_id: int, user_id: int, user: String, score: int, time: int):
 	scores.append({"score_id": score_id, "user_id": user_id, "user" : user, "score": score, "time": time})
 	sortScores()
 	saveScores()
+	
+	addScoreRemote(score_id, user_id, user, score, time)
 
 func sortScores():
 	scores.sort_custom(self, "custom_scores_sort")
@@ -75,6 +77,8 @@ func addScoreRemote(score_id: int, user_id: int, user: String, score: int, time:
 
 func loadScoresRemote():
 	var url = Global.Api["url"]+Global.Api["loadScores"]+"/"+str(Global.gameId)
+	print(url)
+	
 	var response = yield(HttpRequest.get(url), "completed")
 	
 	return response.body
