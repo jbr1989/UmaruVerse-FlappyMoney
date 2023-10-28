@@ -14,7 +14,6 @@ func addScore(score_id: int, user_id: int, user: String, score: int, time: int):
 
 func sortScores():
 	scores.sort_custom(self, "custom_scores_sort")
-	
 
 func isHighScore(score: int, time: int):
 	if (scores.empty()): return true
@@ -28,11 +27,11 @@ func isHighScore(score: int, time: int):
 
 func loadScores():
 	scores = loadScoresFromLocalFile()
-	
+
 func saveScores():
 	saveScoresToLocalFile()
-	
-	
+
+
 # OTROS
 
 func custom_scores_sort(a : Dictionary, b : Dictionary):
@@ -67,3 +66,15 @@ func saveScoresToLocalFile():
 		file.close()
 	else:
 		print("Error al abrir el archivo para escritura")
+
+# REMOTE
+
+func addScoreRemote(score_id: int, user_id: int, user: String, score: int, time: int):
+	var body : Dictionary = { "gameId" : Global.gameId, "userId" : user_id, "user": user, "score": score, "time": time}
+	var response = yield(HttpRequest.postJSON(Global.Api["url"]+Global.Api["addScore"], [], to_json(body)), "completed")
+
+func loadScoresRemote():
+	var url = Global.Api["url"]+Global.Api["loadScores"]+"/"+str(Global.gameId)
+	var response = yield(HttpRequest.get(url), "completed")
+	
+	return response.body

@@ -5,8 +5,8 @@ onready var sound_musica = AudioServer.get_bus_index("Musica")
 onready var sound_sfx = AudioServer.get_bus_index("SFX")
 
 onready var SoundChk = $Panel/VBoxContainer/Audio/SoundChk
-onready var MusicaChk = $Panel/VBoxContainer/Audio/MusicaChk
-onready var EfectosChk = $Panel/VBoxContainer/Audio/EfectosChk
+onready var MusicaChk = $Panel/VBoxContainer/Audio_Musica/MusicaChk
+onready var EfectosChk = $Panel/VBoxContainer/Audio_SFX/EfectosChk
 
 onready var DebugChk = $Panel/VBoxContainer/Debug/DebugChk
 

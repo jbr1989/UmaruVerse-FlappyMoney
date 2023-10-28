@@ -23,7 +23,7 @@ func _on_TabContainer_tab_changed(tab):
 func showPuntuaciones(tab):
 	
 	if (tab==0): puntuaciones = Scores.scores
-	elif (tab==1): puntuaciones = []
+	elif (tab==1): puntuaciones = yield(Scores.loadScoresRemote(), "completed")
 	
 	var size = puntuaciones.size()
 	

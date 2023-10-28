@@ -1,5 +1,7 @@
 extends Node
 
+export var gameId = 3
+
 onready var Scene : Dictionary = {
 	"Pause" : "res://0 - General/Scenes/Pausa_menu.tscn",
 	"Settings" : "res://0 - General/Scenes/SettingsScene.tscn",
@@ -11,7 +13,10 @@ onready var Scene : Dictionary = {
 }
 
 onready var Api : Dictionary = {
-	"url" : "http://localhost:3000/" # https://api.jbr1989.es/api/
+	"url" : "https://api.jbr1989.es/", # http://localhost:3000/"
+	"key" : "",
+	"addScore": "umaruverse/scores",
+	"loadScores": "umaruverse/scores/top"
 }
 
 func goto_scene(scene):
