@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://0 - General/Scripts/Pausa_menu.gd" type="Script" id=1]
-[ext_resource path="res://0 - General/Sprites/UI/sound-play.svg" type="Texture" id=2]
-[ext_resource path="res://Sprites/UI/gear.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/UI/failed.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/UI/reload.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/UI/play.png" type="Texture" id=6]
+[ext_resource path="res://0 - General/Sprites/UI/sound-on-texture.tres" type="Texture" id=2]
+[ext_resource path="res://0 - General/Sprites/UI/play-texture.tres" type="Texture" id=3]
+[ext_resource path="res://0 - General/Sprites/UI/failed-texture.tres" type="Texture" id=4]
+[ext_resource path="res://0 - General/Sprites/UI/reload_texture.tres" type="Texture" id=5]
+[ext_resource path="res://0 - General/Sprites/UI/gear-texture.tres" type="Texture" id=6]
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
@@ -58,7 +58,7 @@ alignment = 1
 margin_left = 157.0
 margin_right = 221.0
 margin_bottom = 64.0
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 3 )
 
 [node name="Restart" type="TextureButton" parent="Menu/HBoxContainer2"]
 margin_left = 271.0
@@ -70,7 +70,7 @@ texture_normal = ExtResource( 5 )
 margin_left = 385.0
 margin_right = 449.0
 margin_bottom = 64.0
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 6 )
 
 [node name="Quit" type="TextureButton" parent="Menu/HBoxContainer2"]
 margin_left = 499.0

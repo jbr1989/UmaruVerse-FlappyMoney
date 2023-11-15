@@ -2,16 +2,16 @@
 
 [ext_resource path="res://0 - General/Themes/Fonts/Lato-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://0 - General/Themes/Billete.tres" type="StyleBox" id=2]
-[ext_resource path="res://Sprites/timer.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/dinerito.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/UI/failed.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/timer-texture.tres" type="Texture" id=3]
+[ext_resource path="res://Sprites/Bird/dineritos-texture.tres" type="Texture" id=4]
+[ext_resource path="res://0 - General/Sprites/UI/rating-texture.tres" type="Texture" id=5]
 [ext_resource path="res://0 - General/Themes/Fonts/Titulos.tres" type="DynamicFont" id=6]
-[ext_resource path="res://Sprites/UI/reload.png" type="Texture" id=7]
+[ext_resource path="res://0 - General/Sprites/UI/reload_texture.tres" type="Texture" id=7]
 [ext_resource path="res://Scripts/Puntuacion.gd" type="Script" id=8]
-[ext_resource path="res://Sprites/UI/save-disabled.png" type="Texture" id=9]
+[ext_resource path="res://0 - General/Sprites/UI/failed-texture.tres" type="Texture" id=9]
 [ext_resource path="res://0 - General/Themes/Normal.tres" type="Theme" id=10]
-[ext_resource path="res://Sprites/UI/save.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/UI/rating.png" type="Texture" id=12]
+[ext_resource path="res://0 - General/Sprites/UI/save-disabled-texture.tres" type="Texture" id=11]
+[ext_resource path="res://0 - General/Sprites/UI/save-texture.tres" type="Texture" id=12]
 
 [sub_resource type="Theme" id=2]
 Label/colors/font_color = Color( 0, 0, 0, 1 )
@@ -75,29 +75,29 @@ custom_constants/separation = 75
 alignment = 1
 
 [node name="BookContainer" type="HBoxContainer" parent="Panel/InfoContainer"]
-margin_left = 132.0
-margin_right = 229.0
+margin_left = 120.0
+margin_right = 241.0
 margin_bottom = 78.0
 custom_constants/separation = 20
 alignment = 1
 
 [node name="Book" type="TextureRect" parent="Panel/InfoContainer/BookContainer"]
-margin_right = 40.0
+margin_right = 64.0
 margin_bottom = 78.0
 texture = ExtResource( 4 )
 stretch_mode = 4
 
 [node name="ScoreLabel" type="Label" parent="Panel/InfoContainer/BookContainer"]
-margin_left = 60.0
-margin_right = 97.0
+margin_left = 84.0
+margin_right = 121.0
 margin_bottom = 78.0
 rect_pivot_offset = Vector2( -621, -106 )
 custom_fonts/font = SubResource( 3 )
 text = "0"
 
 [node name="TimerContainer" type="HBoxContainer" parent="Panel/InfoContainer"]
-margin_left = 304.0
-margin_right = 425.0
+margin_left = 316.0
+margin_right = 437.0
 margin_bottom = 78.0
 custom_constants/separation = 20
 alignment = 1
@@ -139,8 +139,8 @@ text = "Anónimo"
 margin_left = 231.0
 margin_right = 295.0
 margin_bottom = 64.0
-texture_normal = ExtResource( 11 )
-texture_disabled = ExtResource( 9 )
+texture_normal = ExtResource( 12 )
+texture_disabled = ExtResource( 11 )
 
 [node name="BtnContainer" type="HBoxContainer" parent="Panel"]
 anchor_top = 1.0
@@ -152,22 +152,22 @@ custom_constants/separation = 50
 alignment = 1
 
 [node name="RetryBtn" type="TextureButton" parent="Panel/BtnContainer"]
-margin_left = 138.0
-margin_right = 202.0
+margin_left = 133.0
+margin_right = 197.0
 margin_bottom = 70.0
 texture_normal = ExtResource( 7 )
 
 [node name="Scores" type="TextureButton" parent="Panel/BtnContainer"]
-margin_left = 252.0
-margin_right = 306.0
-margin_bottom = 70.0
-texture_normal = ExtResource( 12 )
-
-[node name="CloseBtn" type="TextureButton" parent="Panel/BtnContainer"]
-margin_left = 356.0
-margin_right = 420.0
+margin_left = 247.0
+margin_right = 311.0
 margin_bottom = 70.0
 texture_normal = ExtResource( 5 )
+
+[node name="CloseBtn" type="TextureButton" parent="Panel/BtnContainer"]
+margin_left = 361.0
+margin_right = 425.0
+margin_bottom = 70.0
+texture_normal = ExtResource( 9 )
 
 [connection signal="pressed" from="Panel/InfoContainer2/SaveBtn" to="." method="_on_SaveBtn_pressed"]
 [connection signal="pressed" from="Panel/BtnContainer/RetryBtn" to="." method="_on_RetryBtn_pressed"]

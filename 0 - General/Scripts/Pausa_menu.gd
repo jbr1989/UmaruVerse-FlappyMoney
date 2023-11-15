@@ -2,8 +2,8 @@ extends CanvasLayer
 
 onready var SoundBtn = $Menu/HBoxContainer/SoundBtn
 
-onready var sound_play = preload("res://0 - General/Sprites/UI/sound-mute.svg")
-onready var sound_mute = preload("res://0 - General/Sprites/UI/sound-play.svg")
+onready var sound_play = preload("res://0 - General/Sprites/UI/sound-on-texture.tres")
+onready var sound_mute = preload("res://0 - General/Sprites/UI/sound-off-texture.tres")
 
 onready var master_sound : int = AudioServer.get_bus_index("Master")
 onready var is_mute: bool = false

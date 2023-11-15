@@ -9,9 +9,9 @@
 [ext_resource path="res://Scripts/World.gd" type="Script" id=7]
 [ext_resource path="res://Audios/sfx_point.wav" type="AudioStream" id=8]
 [ext_resource path="res://0 - General/Themes/Fonts/Lato-Bold.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://0 - General/Sprites/UI/pause.svg" type="Texture" id=10]
-[ext_resource path="res://Sprites/timer.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/dinerito.png" type="Texture" id=12]
+[ext_resource path="res://0 - General/Sprites/UI/pause-texture.tres" type="Texture" id=10]
+[ext_resource path="res://Sprites/timer-texture.tres" type="Texture" id=11]
+[ext_resource path="res://Sprites/Bird/dineritos-texture.tres" type="Texture" id=12]
 [ext_resource path="res://Screens/Puntuacion.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -97,29 +97,29 @@ custom_constants/separation = 100
 alignment = 1
 
 [node name="BookContainer" type="HBoxContainer" parent="GUI/InfoContainer"]
-margin_left = 91.0
-margin_right = 188.0
+margin_left = 79.0
+margin_right = 200.0
 margin_bottom = 78.0
 custom_constants/separation = 20
 alignment = 1
 
 [node name="Book" type="TextureRect" parent="GUI/InfoContainer/BookContainer"]
-margin_right = 40.0
+margin_right = 64.0
 margin_bottom = 78.0
 texture = ExtResource( 12 )
 stretch_mode = 6
 
 [node name="ScoreLabel" type="Label" parent="GUI/InfoContainer/BookContainer"]
-margin_left = 60.0
-margin_right = 97.0
+margin_left = 84.0
+margin_right = 121.0
 margin_bottom = 78.0
 rect_pivot_offset = Vector2( -621, -106 )
 custom_fonts/font = SubResource( 5 )
 text = "0"
 
 [node name="TimerContainer" type="HBoxContainer" parent="GUI/InfoContainer"]
-margin_left = 288.0
-margin_right = 409.0
+margin_left = 300.0
+margin_right = 421.0
 margin_bottom = 78.0
 custom_constants/separation = 20
 alignment = 1
@@ -139,7 +139,6 @@ text = "0"
 
 [node name="TouchButton" parent="GUI" instance=ExtResource( 3 )]
 position = Vector2( 36, 920 )
-normal = null
 
 [node name="PauseBtn" type="TextureButton" parent="GUI"]
 anchor_left = 1.0
