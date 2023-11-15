@@ -67,5 +67,5 @@ func addChild(tree, scene):
 func quit():
 	var window = JavaScript.get_interface("window");
 	
-	if window!=null: window.endGame() #window.history.back()
+	if window!=null: window.endMiniGame() #window.history.back()
 	else: get_tree().quit()
