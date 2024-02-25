@@ -169,6 +169,7 @@ margin_right = 425.0
 margin_bottom = 70.0
 texture_normal = ExtResource( 9 )
 
+[connection signal="focus_entered" from="Panel/InfoContainer2/Username" to="." method="_on_Username_focus_entered"]
 [connection signal="pressed" from="Panel/InfoContainer2/SaveBtn" to="." method="_on_SaveBtn_pressed"]
 [connection signal="pressed" from="Panel/BtnContainer/RetryBtn" to="." method="_on_RetryBtn_pressed"]
 [connection signal="pressed" from="Panel/BtnContainer/Scores" to="." method="_on_Scores_pressed"]

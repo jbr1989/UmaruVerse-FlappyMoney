@@ -47,13 +47,15 @@ func _on_Scores_pressed():
 func _on_CloseBtn_pressed():
 	get_tree().paused = false
 	parent.close()
+
+
+func _on_Username_focus_entered():
+	UserName.set_block_signals(true)
 	
+	print("focus_entered")
 	
-
-
-
-
-
-
-
-
+	var name = JavaScript.eval("prompt('%s', '%s');" % ["¿Cual es tu nombre?", UserName.text], true)
+	if (name!=null and name!=""): UserName.text = name
+	
+	yield(get_tree().create_timer(1), "timeout")
+	UserName.set_block_signals(false)
