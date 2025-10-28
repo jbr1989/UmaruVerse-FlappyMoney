@@ -11,10 +11,12 @@ func _ready():
 func init_data():
 	if game_data.empty():
 		#Intentar recuperar los ajustes desde la cookie
-		var cookie : String = Javascript.getData("settings")
+		var cookie = Javascript.getData("settings")
 		
 		if !cookie.empty(): game_data = JSON.parse(cookie).result
 		else: game_data = open_defaults()
+
+		print("SETTINGS: ", game_data)
 		
 		load_init()
 		
@@ -39,7 +41,7 @@ func open_defaults():
 	
 	print("SETTINGS: ", result.result)
 	return result.result
-	
+		
 func save():
 	Javascript.setData("settings", to_json(game_data))
 	
@@ -47,3 +49,4 @@ func load_init():
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), not game_data["audio"]["all"])
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Musica"), not game_data["audio"]["music"])
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("SFX"), not game_data["audio"]["sfx"])
+

@@ -1,20 +1,20 @@
 {
-    "audio" : {
-        "all" : true,
-        "music" : true,
-        "sfx" : true
-    },
-    "debug": false,
-    "oAuth":{
-        "type": "",
-        "token": "",
-        "refresh": ""
-    },
-    "user": {
-        "id": "",
-        "type": "",
-        "type_id": "",
-        "name": "",
-        "img": ""
-    }
+  "audio": {
+    "all": true,
+    "music": true,
+    "sfx": true
+  },
+  "debug": false,
+  "oAuth": {
+    "type": "",
+    "token": "",
+    "refresh": ""
+  },
+  "user": {
+    "id": "",
+    "type": "",
+    "type_id": "",
+    "name": "",
+    "img": ""
+  }
 }
