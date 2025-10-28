@@ -38,8 +38,7 @@ tracks/0/keys = {
 "values": [ false, true ]
 }
 
-[node name="Bird" type="RigidBody2D" groups=["bird"]]
-contacts_reported = 2
+[node name="Bird" type="Area2D" groups=["bird"]]
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -11,7 +11,7 @@ onready var TimeLabel = $GUI/InfoContainer/TimerContainer/TimeLabel
 #onready var puntaje = $GUI/Puntos
 #onready var mensaje = $GUI/Fin
 
-var bird : RigidBody2D
+var bird : Area2D
 
 
 func _ready():
@@ -57,7 +57,7 @@ func addScore():
 		bird._set_animation("1")
 	
 	#if (puntos%10 == 3): #Cada 3 tubos
-	bird.vel_desp +=  bird.vel_incrementar
+	bird.horizontal_speed +=  bird.speed_increment
 	
 
 func fin_juego():

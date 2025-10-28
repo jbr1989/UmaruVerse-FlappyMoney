@@ -9,16 +9,17 @@ func _ready():
 	init_data()
 
 func init_data():
-	if game_data.empty():
-		#Intentar recuperar los ajustes desde la cookie
-		var cookie = Javascript.getData("settings")
-		
-		if !cookie.empty(): game_data = JSON.parse(cookie).result
-		else: game_data = open_defaults()
+	if not game_data.empty(): pass
+	
+	#Intentar recuperar los ajustes desde la cookie
+	var cookie = Javascript.getData("settings")
+	
+	if !cookie.empty(): game_data = JSON.parse(cookie).result
+	else: game_data = open_defaults()
 
-		print("SETTINGS: ", game_data)
-		
-		load_init()
+	print("SETTINGS: ", game_data)
+	
+	load_init()
 		
 func open_defaults():
 	print("OPEN DEFAULTS")

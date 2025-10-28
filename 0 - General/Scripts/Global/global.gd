@@ -36,7 +36,6 @@ func goto_scene(scene):
 
 func _deferred_goto_scene(path):
 
-	
 	var root = get_tree().get_root()
 	#var current_scene = root.get_child( root.get_child_count() -1 )
 	
